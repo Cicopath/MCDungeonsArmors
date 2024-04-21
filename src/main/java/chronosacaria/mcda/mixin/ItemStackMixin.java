@@ -23,7 +23,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 @Mixin(ItemStack.class)
 public abstract class ItemStackMixin {
@@ -40,9 +39,9 @@ public abstract class ItemStackMixin {
                     ArmorEffects.BLUE_ARMOR_EFFECT_ID_LIST, ArmorEffects.PURPLE_ARMOR_EFFECT_ID_LIST));
 
             if (sets.contains(armorItem.getSet())) {
-                stack.getOrCreateNbt().putInt("dominance", new Random().nextInt(99));
+                stack.getOrCreateNbt().putInt("dominance", CleanlinessHelper.random.nextInt(99));
                 stack.getOrCreateNbt().putInt("mystery_effect",
-                        new Random().nextInt(effects.get(sets.indexOf(armorItem.getSet())).size() - 1) + 1);
+                        CleanlinessHelper.random.nextInt(effects.get(sets.indexOf(armorItem.getSet())).size() - 1) + 1);
             }
         }
     }
