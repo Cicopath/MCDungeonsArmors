@@ -15,11 +15,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.math.Vec3d;
-
-import java.util.Random;
+import net.minecraft.util.math.random.Random;
 
 public class CleanlinessHelper {
-    static Random random = new Random();
+    @SuppressWarnings("deprecation")
+    public static Random random = Random.createThreadSafe();
 
     @SuppressWarnings("ConstantConditions")
     public static boolean checkFullArmor(LivingEntity livingEntity, ArmorSets armorSets) {
@@ -71,7 +71,6 @@ public class CleanlinessHelper {
     }
 
     public static void mcdaRandomArmorDamage(LivingEntity livingEntity, float damagePercentage, int totalNumOfPieces, boolean missingBoots){
-        Random random = new Random();
         int index = random.nextInt(totalNumOfPieces);
         if (missingBoots)
             index++;

@@ -1,5 +1,6 @@
 package chronosacaria.mcda.mixin;
 
+import chronosacaria.mcda.api.CleanlinessHelper;
 import chronosacaria.mcda.effects.ArmorEffectID;
 import chronosacaria.mcda.effects.ArmorEffects;
 import chronosacaria.mcda.items.ArmorSetItem;
@@ -13,7 +14,6 @@ import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 @Mixin(ItemEntry.class)
 public class ItemEntryMixin {
@@ -28,11 +28,10 @@ public class ItemEntryMixin {
                 ArrayList<List<ArmorEffectID>> effects = new ArrayList<>(List.of(ArmorEffects.ARMOR_EFFECT_ID_LIST,
                         ArmorEffects.RED_ARMOR_EFFECT_ID_LIST, ArmorEffects.GREEN_ARMOR_EFFECT_ID_LIST,
                         ArmorEffects.BLUE_ARMOR_EFFECT_ID_LIST, ArmorEffects.PURPLE_ARMOR_EFFECT_ID_LIST));
-
                 if (sets.contains(armorItem.getSet())) {
-                    stack.getOrCreateNbt().putInt("dominance", new Random().nextInt(99));
+                    stack.getOrCreateNbt().putInt("dominance", CleanlinessHelper.random.nextInt(99));
                     stack.getOrCreateNbt().putInt("mystery_effect",
-                            new Random().nextInt(effects.get(sets.indexOf(armorItem.getSet())).size() - 1) + 1);
+                            CleanlinessHelper.random.nextInt(effects.get(sets.indexOf(armorItem.getSet())).size() - 1) + 1);
                     args.set(0, stack);
                 }
             }
