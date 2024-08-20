@@ -14,6 +14,30 @@
     },
 	{
       "item": "mcda:nimble_turtle_armor_boots"
+    },
+	{
+      "item": "mcda:white_mystery_armor_helmet"
+    },
+	{
+      "item": "mcda:white_mystery_armor_chestplate"
+    },
+	{
+      "item": "mcda:white_mystery_armor_leggings"
+    },
+	{
+      "item": "mcda:white_mystery_armor_boots"
+    },
+	{
+      "item": "mcda:blue_mystery_armor_helmet"
+    },
+	{
+      "item": "mcda:blue_mystery_armor_chestplate"
+    },
+	{
+      "item": "mcda:blue_mystery_armor_leggings"
+    },
+	{
+      "item": "mcda:blue_mystery_armor_boots"
     }
   ],
   "fabric:load_conditions": [
