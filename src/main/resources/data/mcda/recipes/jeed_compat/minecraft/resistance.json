@@ -1,0 +1,39 @@
+{
+  "replace": false,
+  "type": "jeed:effect_provider",
+  "effect": "minecraft:resistance",
+  "providers": [
+    {
+      "item": "mcda:nimble_turtle_armor_helmet"
+    },
+	{
+      "item": "mcda:nimble_turtle_armor_chestplate"
+    },
+	{
+      "item": "mcda:nimble_turtle_armor_leggings"
+    },
+	{
+      "item": "mcda:nimble_turtle_armor_boots"
+    },
+	{
+      "item": "mcda:stalwart_armor_helmet"
+    },
+	{
+      "item": "mcda:stalwart_armor_chestplate"
+    },
+	{
+      "item": "mcda:stalwart_armor_leggings"
+    },
+	{
+      "item": "mcda:stalwart_armor_boots"
+    }
+  ],
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "jeed"
+      ]
+    }
+  ]
+}

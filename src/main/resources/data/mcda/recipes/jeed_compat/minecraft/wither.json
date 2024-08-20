@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "type": "jeed:effect_provider",
+  "effect": "minecraft:wither",
+  "providers": [
+    {
+      "item": "mcda:wither_armor_helmet"
+    },
+	{
+      "item": "mcda:wither_armor_chestplate"
+    },
+	{
+      "item": "mcda:wither_armor_leggings"
+    },
+	{
+      "item": "mcda:wither_armor_boots"
+    }
+  ],
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "jeed"
+      ]
+    }
+  ]
+}
