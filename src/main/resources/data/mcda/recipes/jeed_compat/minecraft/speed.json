@@ -38,6 +38,18 @@
     },
 	{
       "item": "mcda:souldancer_robe_boots"
+    },
+	{
+      "item": "mcda:cauldron_armor_helmet"
+    },
+	{
+      "item": "mcda:cauldron_armor_chestplate"
+    },
+	{
+      "item": "mcda:cauldron_armor_leggings"
+    },
+	{
+      "item": "mcda:cauldron_armor_boots"
     }
   ],
   "fabric:load_conditions": [
